@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import '../auth.css';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 const SigninPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,7 +24,7 @@ const SigninPage = () => {
         console.log('Admin login successful', data);
 
         toast.success('Admin Login Successful', {
-            position: 'top-center',
+          position: 'top-center',
         });
         window.location.href = '/pages/movie/createmovie';
 
@@ -32,7 +32,7 @@ const SigninPage = () => {
         // Handle login error
         console.error('Admin login failed', response.statusText);
         toast.error('Admin Login Failed', {
-            position: 'top-center',
+          position: 'top-center',
         });
       }
     }
